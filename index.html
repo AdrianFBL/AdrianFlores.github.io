@@ -21,7 +21,19 @@
   <header class="site-header">
     <a class="site-brand" href="#work">ADRIAN FLORES</a>
 
-    <nav class="site-nav" aria-label="Navegacion principal">
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Abrir menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Navegacion principal">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
@@ -35,14 +47,14 @@
     <section class="hero-section" id="work">
       <div class="hero-section__inner">
         <div class="hero-main">
-          <div class="hero-copy">
+          <div class="hero-copy" data-reveal>
             <h1>
               <span>ADRIAN</span>
               <span>FLORES</span>
             </h1>
           </div>
 
-          <div class="hero-side">
+          <div class="hero-side" data-reveal>
             <p class="eyebrow">TECHNICAL ARTIST & PROGRAMMER</p>
             <p class="hero-side__text">
               Desarrollo gameplay systems, tools y soluciones tecnicas para proyectos de juego que
@@ -62,7 +74,7 @@
           </div>
         </div>
 
-        <div class="hero-stats" aria-label="Resumen rapido">
+        <div class="hero-stats" aria-label="Resumen rapido" data-reveal>
           <article class="hero-stat">
             <div class="hero-stat__icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.556-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"></path></svg>
@@ -95,10 +107,10 @@
     </section>
 
     <section class="content-section" id="about">
-      <div class="section-label">About me</div>
+      <div class="section-label" data-reveal>About me</div>
 
       <div class="section-body">
-        <div class="section-intro">
+        <div class="section-intro" data-reveal>
           <p class="lead-copy">
             Como Unity developer y tech artist, trabajo entre la vision creativa y la ejecucion
             tecnica. Tengo mas de 7 anos construyendo sistemas de gameplay, herramientas internas,
@@ -107,7 +119,7 @@
         </div>
 
         <div class="feature-grid">
-          <article class="feature-card">
+          <article class="feature-card" data-reveal>
             <div class="feature-card__icon">&lt;/&gt;</div>
             <h3>Systems Architecture</h3>
             <p>
@@ -116,7 +128,7 @@
             </p>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card" data-reveal>
             <div class="feature-card__icon">FX</div>
             <h3>Visual Pipeline</h3>
             <p>
@@ -129,11 +141,11 @@
     </section>
 
     <section class="content-section" id="skills">
-      <div class="section-label">Skills</div>
+      <div class="section-label" data-reveal>Skills</div>
 
       <div class="section-body">
         <div class="skills-grid">
-          <article class="skill-card">
+          <article class="skill-card" data-reveal>
             <p class="skill-card__title">Programming</p>
             <div class="pill-group">
               <span>C#</span>
@@ -144,7 +156,7 @@
             </div>
           </article>
 
-          <article class="skill-card">
+          <article class="skill-card" data-reveal>
             <p class="skill-card__title">Game Development</p>
             <div class="pill-group">
               <span>Unity 3D</span>
@@ -155,7 +167,7 @@
             </div>
           </article>
 
-          <article class="skill-card">
+          <article class="skill-card" data-reveal>
             <p class="skill-card__title">Technical Art</p>
             <div class="pill-group">
               <span>Shader Graph</span>
@@ -170,11 +182,11 @@
     </section>
 
     <section class="content-section" id="projects">
-      <div class="section-label">Projects</div>
+      <div class="section-label" data-reveal>Projects</div>
 
       <div class="section-body">
         <div class="projects-stack">
-          <article class="project-panel">
+          <article class="project-panel" data-reveal>
             <div class="project-panel__media">
               <span>Image / screenshot</span>
             </div>
@@ -199,7 +211,7 @@
             </div>
           </article>
 
-          <article class="project-panel">
+          <article class="project-panel" data-reveal>
             <div class="project-panel__media">
               <span>Image / screenshot</span>
             </div>
@@ -224,7 +236,7 @@
             </div>
           </article>
 
-          <article class="project-panel">
+          <article class="project-panel" data-reveal>
             <div class="project-panel__media">
               <span>Image / screenshot</span>
             </div>
@@ -247,7 +259,7 @@
             </div>
           </article>
 
-          <article class="project-panel">
+          <article class="project-panel" data-reveal>
             <div class="project-panel__media">
               <span>Image / screenshot</span>
             </div>
@@ -270,7 +282,7 @@
             </div>
           </article>
 
-          <article class="project-panel">
+          <article class="project-panel" data-reveal>
             <div class="project-panel__media">
               <span>Image / screenshot</span>
             </div>
@@ -299,15 +311,15 @@
     </section>
 
     <section class="content-section contact-section" id="contact">
-      <div class="section-label">Contact</div>
+      <div class="section-label" data-reveal>Contact</div>
 
       <div class="section-body">
-        <div class="contact-callout">
+        <div class="contact-callout" data-reveal>
           <p class="eyebrow">Ready for the next sprint</p>
           <h2>LET'S BUILD SOMETHING EXTRAORDINARY.</h2>
         </div>
 
-        <div class="contact-links-panel">
+        <div class="contact-links-panel" data-reveal>
           <p class="contact-links-panel__title">Direct contact</p>
           <a class="contact-links-panel__email" href="mailto:floresblancasadrian@gmail.com">
             floresblancasadrian@gmail.com
@@ -333,6 +345,9 @@
 
   <script>
     const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNav = document.getElementById("site-nav");
+    const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
     const heroSection = document.getElementById("work");
     const sections = navLinks
       .map((link) => document.querySelector(link.getAttribute("href")))
@@ -366,8 +381,56 @@
       });
 
       document.body.classList.toggle("is-hero-light", currentSection.id === "work");
-
     };
+
+    const closeMobileMenu = () => {
+      if (!menuToggle || !siteNav) return;
+      menuToggle.setAttribute("aria-expanded", "false");
+      siteNav.classList.remove("is-open");
+    };
+
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isOpen));
+        siteNav.classList.toggle("is-open", !isOpen);
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 820) {
+          closeMobileMenu();
+        }
+      });
+    }
+
+    revealItems.forEach((item, index) => {
+      item.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 80}ms`);
+      item.classList.add("reveal-item");
+    });
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
+        },
+        {
+          threshold: 0.18,
+          rootMargin: "0px 0px -12% 0px"
+        }
+      );
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    }
 
     updateActiveLink();
     window.addEventListener("scroll", updateActiveLink, { passive: true });
