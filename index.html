@@ -3,45 +3,519 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Personal | Desarrollador de Videojuegos</title>
+  <title>Adrian Flores Blancas | Game Developer</title>
   <meta
     name="description"
-    content="Portafolio personal de un desarrollador de videojuegos. Sitio inicial compatible con GitHub Pages."
+    content="Portafolio de Adrian Flores Blancas, game developer especializado en Unity, gameplay systems, tech art y desarrollo multiplataforma."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@700&family=Space+Grotesk:wght@500;700&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="hero">
-    <section class="hero__content">
-      <p class="eyebrow">Portafolio personal</p>
-      <h1>Desarrollador de Videojuegos</h1>
-      <p class="summary">
-        Creo experiencias interactivas, prototipos y mundos digitales. Esta es una primera
-        versión de mi portafolio publicada con GitHub Pages.
-      </p>
-      <div class="hero__actions">
-        <a class="button button--primary" href="#proyectos">Ver proyectos</a>
-        <a class="button button--ghost" href="mailto:tu-correo@ejemplo.com">Contacto</a>
+  <canvas id="topo-bg"></canvas>
+  <header class="site-header">
+    <a class="site-brand" href="#work">ADRIAN FLORES</a>
+
+    <nav class="site-nav" aria-label="Navegacion principal">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="resume-button" href="mailto:floresblancasadrian@gmail.com?subject=Resume%20request">Resume</a>
+  </header>
+
+  <main>
+    <section class="hero-section" id="work">
+      <div class="hero-section__inner">
+        <div class="hero-main">
+          <div class="hero-copy">
+            <h1>
+              <span>ADRIAN</span>
+              <span>FLORES</span>
+            </h1>
+          </div>
+
+          <div class="hero-side">
+            <p class="eyebrow">TECHNICAL ARTIST & PROGRAMMER</p>
+            <p class="hero-side__text">
+              Desarrollo gameplay systems, tools y soluciones tecnicas para proyectos de juego que
+              necesitan claridad de arquitectura, buen game feel y ejecucion consistente.
+            </p>
+
+            <div class="hero-side__actions">
+              <a class="cta cta--primary" href="#projects">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                VER PROYECTOS
+              </a>
+              <a class="cta cta--secondary" href="#contact">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                HABLEMOS
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stats" aria-label="Resumen rapido">
+          <article class="hero-stat">
+            <div class="hero-stat__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.556-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"></path></svg>
+            </div>
+            <div class="hero-stat__info">
+              <span class="hero-stat__value">7+</span>
+              <span class="hero-stat__label">AÑOS DESARROLLANDO<br>VIDEOJUEGOS</span>
+            </div>
+          </article>
+          <article class="hero-stat">
+            <div class="hero-stat__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <div class="hero-stat__info">
+              <span class="hero-stat__value">UNITY</span>
+              <span class="hero-stat__label">GAMEPLAY, TOOLS,<br>UI & SYSTEMS</span>
+            </div>
+          </article>
+          <article class="hero-stat">
+            <div class="hero-stat__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="14" height="10" rx="2" ry="2"></rect><path d="M6 17h6"></path><path d="M9 13v4"></path><rect x="16" y="9" width="6" height="12" rx="1" ry="1"></rect></svg>
+            </div>
+            <div class="hero-stat__info">
+              <span class="hero-stat__value">MOBILE / PC / WEB</span>
+              <span class="hero-stat__label">CROSS-PLATFORM<br>DELIVERY</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="card" id="proyectos">
-      <h2>Próximamente</h2>
-      <p>
-        Aquí podré mostrar mis juegos, herramientas, motores, arte técnico y experimentos.
-      </p>
-      <ul>
-        <li>Proyectos destacados</li>
-        <li>Tecnologías que uso</li>
-        <li>Información de contacto</li>
-      </ul>
+    <section class="content-section" id="about">
+      <div class="section-label">About me</div>
+
+      <div class="section-body">
+        <div class="section-intro">
+          <p class="lead-copy">
+            Como Unity developer y tech artist, trabajo entre la vision creativa y la ejecucion
+            tecnica. Tengo mas de 7 anos construyendo sistemas de gameplay, herramientas internas,
+            interfaces y pipelines para mobile, PC y web.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-card__icon">&lt;/&gt;</div>
+            <h3>Systems Architecture</h3>
+            <p>
+              Construyo frameworks y estructuras de juego escalables que facilitan iteracion,
+              estabilidad y soporte para equipos de diseno.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon">FX</div>
+            <h3>Visual Pipeline</h3>
+            <p>
+              Integro UI, VFX, audio y assets con criterio tecnico para sostener rendimiento sin
+              perder identidad visual.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="skills">
+      <div class="section-label">Skills</div>
+
+      <div class="section-body">
+        <div class="skills-grid">
+          <article class="skill-card">
+            <p class="skill-card__title">Programming</p>
+            <div class="pill-group">
+              <span>C#</span>
+              <span>C++</span>
+              <span>Python</span>
+              <span>HLSL</span>
+              <span>JavaScript</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <p class="skill-card__title">Game Development</p>
+            <div class="pill-group">
+              <span>Unity 3D</span>
+              <span>Gameplay Systems</span>
+              <span>UI Integration</span>
+              <span>Optimization</span>
+              <span>Audio Implementation</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <p class="skill-card__title">Technical Art</p>
+            <div class="pill-group">
+              <span>Shader Graph</span>
+              <span>VFX Graph</span>
+              <span>PBR Texturing</span>
+              <span>Maya</span>
+              <span>Blender</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="projects">
+      <div class="section-label">Projects</div>
+
+      <div class="section-body">
+        <div class="projects-stack">
+          <article class="project-panel">
+            <div class="project-panel__media">
+              <span>Image / screenshot</span>
+            </div>
+            <div class="project-panel__content">
+              <p class="project-panel__meta">2024 - Present / PC / Steam / In development</p>
+              <h3>Hapervil</h3>
+              <p class="project-panel__role">Role: Tech Lead</p>
+              <p class="project-panel__summary">
+                Survival horror third-person con reconstruccion de arquitectura y soporte tecnico
+                para produccion.
+              </p>
+              <ul>
+                <li>Key managers and gameplay systems.</li>
+                <li>Tech support for designers and artists.</li>
+                <li>Clear structure for long-term iteration.</li>
+              </ul>
+              <div class="project-panel__links">
+                <a class="project-link" href="#">Steam</a>
+                <a class="project-link" href="#">YouTube</a>
+                <a class="project-link" href="#">Web</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-panel">
+            <div class="project-panel__media">
+              <span>Image / screenshot</span>
+            </div>
+            <div class="project-panel__content">
+              <p class="project-panel__meta">2026 - Present / Android / iOS</p>
+              <h3>Squish Ems!</h3>
+              <p class="project-panel__role">Role: Unity Programmer</p>
+              <p class="project-panel__summary">
+                Juego mobile inspirado en pachinko con fuerte foco en polish, input feel e
+                interaccion del jugador.
+              </p>
+              <ul>
+                <li>Core gameplay loop.</li>
+                <li>Systems implementation and tuning.</li>
+                <li>Interaction polish and game feel.</li>
+              </ul>
+              <div class="project-panel__links">
+                <a class="project-link" href="#">Google Play</a>
+                <a class="project-link" href="#">App Store</a>
+                <a class="project-link" href="#">YouTube</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-panel">
+            <div class="project-panel__media">
+              <span>Image / screenshot</span>
+            </div>
+            <div class="project-panel__content">
+              <p class="project-panel__meta">2023 - 2024 / Web / Netflix Game</p>
+              <h3>Happy Gilmore 2</h3>
+              <p class="project-panel__role">Role: Unity Programmer</p>
+              <p class="project-panel__summary">
+                Soporte de mecanicas para una experiencia web con tono arcade y ejecucion rapida.
+              </p>
+              <ul>
+                <li>Gameplay mechanics implementation.</li>
+                <li>Arcade interaction support.</li>
+                <li>Responsive iteration on feel.</li>
+              </ul>
+              <div class="project-panel__links">
+                <a class="project-link" href="#">Web</a>
+                <a class="project-link" href="#">YouTube</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-panel">
+            <div class="project-panel__media">
+              <span>Image / screenshot</span>
+            </div>
+            <div class="project-panel__content">
+              <p class="project-panel__meta">2022 - 2023 / iOS / Rhythm systems</p>
+              <h3>Tetris Beat</h3>
+              <p class="project-panel__role">Role: Unity Programmer / Tech Artist</p>
+              <p class="project-panel__summary">
+                Trabajo tecnico entre gameplay, audio implementation y visual support para ritmo.
+              </p>
+              <ul>
+                <li>Wwise integration.</li>
+                <li>Audio reactive tools.</li>
+                <li>VFX, UI and animation integration.</li>
+              </ul>
+              <div class="project-panel__links">
+                <a class="project-link" href="#">App Store</a>
+                <a class="project-link" href="#">YouTube</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-panel">
+            <div class="project-panel__media">
+              <span>Image / screenshot</span>
+            </div>
+            <div class="project-panel__content">
+              <p class="project-panel__meta">2018 - 2022 / Android / iOS</p>
+              <h3>Mobile Projects</h3>
+              <p class="project-panel__role">Role: Unity Programmer</p>
+              <p class="project-panel__summary">
+                Trabajo en varios proyectos mobile enfocado en systems, progression, UI flows,
+                monetization y soporte de conectividad.
+              </p>
+              <ul>
+                <li>Driver Survivor, Mobile Endless Runner y Reto Rusia.</li>
+                <li>Gameplay systems, progression and UI interactions.</li>
+                <li>Backend connection, login and turn-based multiplayer support.</li>
+              </ul>
+              <div class="project-panel__links">
+                <a class="project-link" href="#">Google Play</a>
+                <a class="project-link" href="#">App Store</a>
+                <a class="project-link" href="#">YouTube</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section contact-section" id="contact">
+      <div class="section-label">Contact</div>
+
+      <div class="section-body">
+        <div class="contact-callout">
+          <p class="eyebrow">Ready for the next sprint</p>
+          <h2>LET'S BUILD SOMETHING EXTRAORDINARY.</h2>
+        </div>
+
+        <div class="contact-links-panel">
+          <p class="contact-links-panel__title">Direct contact</p>
+          <a class="contact-links-panel__email" href="mailto:floresblancasadrian@gmail.com">
+            floresblancasadrian@gmail.com
+          </a>
+          <div class="contact-socials" aria-label="Links de contacto">
+            <a class="contact-social" href="#" aria-label="Agrega tu perfil de LinkedIn">
+              <span aria-hidden="true">in</span>
+            </a>
+            <a class="contact-social" href="#" aria-label="Agrega tu perfil de GitHub">
+              <span aria-hidden="true">{ }</span>
+            </a>
+            <a class="contact-social" href="#" aria-label="Agrega tu perfil de itch.io">
+              <span aria-hidden="true">[]</span>
+            </a>
+            <a class="contact-social" href="mailto:floresblancasadrian@gmail.com" aria-label="Enviar correo">
+              <span aria-hidden="true">@</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
+  <script>
+    const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
+    const heroSection = document.getElementById("work");
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
+    const trackedSections = [heroSection, ...sections].filter(Boolean);
+
+    const updateActiveLink = () => {
+      const header = document.querySelector(".site-header");
+      const headerHeight = header ? header.offsetHeight : 0;
+      const triggerY = Math.max(headerHeight + 36, window.innerHeight * 0.3);
+      let currentSection = trackedSections[0] || null;
+
+      for (const section of trackedSections) {
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= triggerY && rect.bottom > triggerY) {
+          currentSection = section;
+          break;
+        }
+      }
+
+      if (!currentSection) {
+        currentSection =
+          trackedSections.find((section) => section.getBoundingClientRect().top > 0) ||
+          trackedSections[trackedSections.length - 1];
+      }
+
+      navLinks.forEach((link) => {
+        const isMatch = link.getAttribute("href") === "#" + currentSection.id;
+        link.classList.toggle("is-active", isMatch);
+      });
+
+      document.body.classList.toggle("is-hero-light", currentSection.id === "work");
+
+    };
+
+    updateActiveLink();
+    window.addEventListener("scroll", updateActiveLink, { passive: true });
+    window.addEventListener("resize", updateActiveLink);
+
+    // --- WebGL Topography Background ---
+    const canvas = document.getElementById('topo-bg');
+    const gl = canvas.getContext('webgl');
+
+    if (gl) {
+      const vsSource = `
+        attribute vec4 aVertexPosition;
+        void main() {
+          gl_Position = aVertexPosition;
+        }
+      `;
+
+      const fsSource = `
+        precision highp float;
+        uniform vec2 u_resolution;
+        uniform float u_time;
+
+        // Simplex 2D noise
+        vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+        vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+        vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
+
+        float snoise(vec2 v) {
+          const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+          vec2 i  = floor(v + dot(v, C.yy) );
+          vec2 x0 = v -   i + dot(i, C.xx);
+          vec2 i1;
+          i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+          vec4 x12 = x0.xyxy + C.xxzz;
+          x12.xy -= i1;
+          i = mod289(i);
+          vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 )) + i.x + vec3(0.0, i1.x, 1.0 ));
+          vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+          m = m*m ;
+          m = m*m ;
+          vec3 x = 2.0 * fract(p * C.www) - 1.0;
+          vec3 h = abs(x) - 0.5;
+          vec3 ox = floor(x + 0.5);
+          vec3 a0 = x - ox;
+          m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+          vec3 g;
+          g.x  = a0.x  * x0.x  + h.x  * x0.y;
+          g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+          return 130.0 * dot(m, g);
+        }
+
+        void main() {
+            vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+            float aspect = u_resolution.x / u_resolution.y;
+            vec2 pos = uv;
+            pos.x *= aspect;
+            
+            // Zoom scale
+            pos *= 0.5; 
+            
+            // Slow panning movement
+            pos += vec2(u_time * 0.02, u_time * 0.03);
+            
+            // Natural looking topography with 2 octaves of noise
+            float n = snoise(pos) * 0.1 + snoise(pos * 0.5 - u_time * 0.04) * 0.3;
+            
+            // Create the contour lines
+            float lines = fract(n * 50.0);
+            
+            // Anti-aliased line drawing (thickness)
+            float edge = smoothstep(0.0, 0.06, lines) - smoothstep(0.94, 1.0, lines);
+            float lineAlpha = 1.0 - edge;
+            
+            // Pulsing effect based on noise and time (ondas de intensidad)
+            float pulse = sin(n * 15.0 - u_time * 1.0) * 0.5 + 0.5;
+            float mask = snoise(uv * 3.0 + u_time * 0.1) * 0.5 + 0.5;
+            
+            // Si no tienen intensidad no se ven
+            float intensity = pow(pulse * mask, 2.0);
+            
+            // Opcional: concentrar un poco más a la derecha como en la imagen
+            float fadeRight = smoothstep(0.0, 0.0, uv.x);
+            intensity *= (fadeRight * 0.7 + 0.3);
+            
+            vec3 color = vec3(0.86, 0.53, 0.16); // Color naranja
+            
+            gl_FragColor = vec4(color, lineAlpha * intensity * 0.3);
+        }
+      `;
+
+      function initShaderProgram(gl, vsSource, fsSource) {
+        const vertexShader = loadShader(gl, gl.VERTEX_SHADER, vsSource);
+        const fragmentShader = loadShader(gl, gl.FRAGMENT_SHADER, fsSource);
+        const shaderProgram = gl.createProgram();
+        gl.attachShader(shaderProgram, vertexShader);
+        gl.attachShader(shaderProgram, fragmentShader);
+        gl.linkProgram(shaderProgram);
+        return shaderProgram;
+      }
+
+      function loadShader(gl, type, source) {
+        const shader = gl.createShader(type);
+        gl.shaderSource(shader, source);
+        gl.compileShader(shader);
+        return shader;
+      }
+
+      const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
+      const programInfo = {
+        program: shaderProgram,
+        attribLocations: { vertexPosition: gl.getAttribLocation(shaderProgram, 'aVertexPosition') },
+        uniformLocations: {
+          resolution: gl.getUniformLocation(shaderProgram, 'u_resolution'),
+          time: gl.getUniformLocation(shaderProgram, 'u_time'),
+        },
+      };
+
+      const positions = new Float32Array([-1.0, 1.0, 1.0, 1.0, -1.0, -1.0, 1.0, -1.0]);
+      const positionBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        gl.viewport(0, 0, canvas.width, canvas.height);
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      let startTime = Date.now();
+      function render() {
+        const currentTime = (Date.now() - startTime) * 0.001;
+        gl.clearColor(0.0, 0.0, 0.0, 0.0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.useProgram(programInfo.program);
+        gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+        gl.vertexAttribPointer(programInfo.attribLocations.vertexPosition, 2, gl.FLOAT, false, 0, 0);
+        gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
+        gl.uniform2f(programInfo.uniformLocations.resolution, canvas.width, canvas.height);
+        gl.uniform1f(programInfo.uniformLocations.time, currentTime);
+        gl.enable(gl.BLEND);
+        gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+        requestAnimationFrame(render);
+      }
+      render();
+    }
+  </script>
 </body>
 </html>
